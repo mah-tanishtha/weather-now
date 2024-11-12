@@ -92,7 +92,7 @@ const WeatherDisplay = ({ coordinates }) => {
       title: {
         display: true,
         text: '7-Day Temperature Forecast',
-        
+
       },
     },
   };
@@ -113,8 +113,8 @@ const WeatherDisplay = ({ coordinates }) => {
         <button className='ms-3 text-primary' onClick={() => handleCurrentWeatherDisplay()}>Current Weather</button>
       </div>
 
-      {/* Display weather data in cards if you still want to keep them */}
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', marginTop: '20px' ,marginBottom:"20px"}}>
+      {/* Display weather data in cards */}
+      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', marginTop: '20px', marginBottom: "20px" }}>
         {weatherData.time.map((date, index) => (
           <div key={index} style={{ border: '1px solid #ccc', padding: '10px', width: '200px' }}>
             <span style={{ fontSize: '20px', fontWeight: 500 }}>{date}</span>
@@ -130,15 +130,18 @@ const WeatherDisplay = ({ coordinates }) => {
         ))}
       </div>
 
-      {
-        currentWeather ? <CurrentWeather coordinates={coordinates}/> : ''
-      }
+      {/* to display current weather */}
 
       {
-        chartDisplay ? <Line  style={{marginTop:'20px'}} data={chartData} options={options} /> : ''
+        currentWeather ? <CurrentWeather coordinates={coordinates} /> : ''
       }
 
-      
+      {/* to display Line Chart */}
+      {
+        chartDisplay ? <Line style={{ marginTop: '20px' }} data={chartData} options={options} /> : ''
+      }
+
+
 
     </div>
   );

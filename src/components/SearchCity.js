@@ -26,7 +26,8 @@ const SearchCity = () => {
   };
 
   return (
-    <div className='searchCity '>
+    // to search a city 
+    <div className='searchCity '>  
       <h5 className='text-secondary'>Search for a City</h5>
       <input
         type="text"
