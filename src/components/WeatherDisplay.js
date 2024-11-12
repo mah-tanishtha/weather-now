@@ -116,7 +116,7 @@ const WeatherDisplay = ({ coordinates }) => {
       {/* Display weather data in cards if you still want to keep them */}
       <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', marginTop: '20px' ,marginBottom:"20px"}}>
         {weatherData.time.map((date, index) => (
-          <div key={index} style={{ border: '1px solid #ccc', padding: '10px', width: '180px' }}>
+          <div key={index} style={{ border: '1px solid #ccc', padding: '10px', width: '200px' }}>
             <span style={{ fontSize: '20px', fontWeight: 500 }}>{date}</span>
             <br />
             <span className='text-secondary'>{getDayOfWeek(date)}:</span>
